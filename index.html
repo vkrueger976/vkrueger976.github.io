@@ -35,7 +35,38 @@
     p.subtitle {
       font-size: 1.2rem;
       opacity: 0.9;
+      margin-bottom: 1.5rem;
+    }
+
+    /* Social icons row */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 18px;
       margin-bottom: 2rem;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0,0,0,0.18);
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      backdrop-filter: blur(4px);
+      transition: background 0.2s, transform 0.1s, border-color 0.2s;
+    }
+
+    .social-icon:hover {
+      background: rgba(255,255,255,0.25);
+      border-color: rgba(255,255,255,0.9);
+      transform: translateY(-1px);
     }
 
     .tabs {
@@ -111,15 +142,39 @@
     <h1>Violette Krueger</h1>
     <p class="subtitle">Computer Science | Portfolio</p>
 
+    <!-- Social icons -->
+    <div class="social-links">
+      <!-- GitHub icon (G) -->
+      <a
+        class="social-icon"
+        href="https://github.com/vkrueger976"
+        target="_blank"
+        rel="noopener"
+        aria-label="GitHub"
+      >
+        G
+      </a>
+
+      <!-- LinkedIn icon (in) -->
+      <a
+        class="social-icon"
+        href="https://www.linkedin.com/in/violette-krueger-6238343a8/"
+        target="_blank"
+        rel="noopener"
+        aria-label="LinkedIn"
+      >
+        in
+      </a>
+    </div>
+
     <div class="tabs">
       <button class="tab active" data-tab="home">Home</button>
       <button class="tab" data-tab="projects">Projects</button>
       <button class="tab" data-tab="skills">Skills</button>
-      <button class="tab" data-tab="contact">Contact</button>
     </div>
 
     <div id="home" class="tab-content active">
-      <p>Welcome to my portfolio. Use the tabs above to view my projects, skills, and contact information.</p>
+      <p>Welcome to my portfolio. Use the tabs above to view my projects and skills.</p>
     </div>
 
     <div id="projects" class="tab-content">
@@ -142,25 +197,6 @@
       <ul>
         <li>Git &amp; GitHub</li>
         <li>VS Code</li>
-      </ul>
-    </div>
-
-    <div id="contact" class="tab-content">
-      <h2>Connect With Me</h2>
-      <ul>
-        <li>
-          GitHub:
-          <a href="https://github.com/vkrueger976" target="_blank" rel="noopener">
-            github.com/vkrueger976
-          </a>
-        </li>
-        <li>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/violette-krueger-6238343a8/"
-             target="_blank" rel="noopener">
-            Violette Krueger on LinkedIn
-          </a>
-        </li>
       </ul>
     </div>
   </div>
