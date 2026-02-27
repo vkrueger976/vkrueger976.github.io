@@ -1,0 +1,9 @@
+theme: jekyll-theme-cayman
+title: Violette Krueger | Portfolio
+description: Personal Portfolio Website
+
+header_pages:
+  - index.md
+  - skills.md
+  - projects.md
+  - contact.md
