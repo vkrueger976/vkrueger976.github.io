@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Personal Portfolio</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #ffffff;
+      background: linear-gradient(90deg, #0b5aa7, #0f9b73);
+    }
+
+    .container {
+      text-align: center;
+      width: 100%;
+      max-width: 900px;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p.subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    /* Tabs bar */
+    .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 2rem;
+    }
+
+    .tab {
+      padding: 10px 22px;
+      border-radius: 999px;           /* pill shape */
+      border: 1px solid rgba(255,255,255,0.4); /* thin, slightly clear border */
+      background: rgba(0,0,0,0.1);    /* subtle see‑through fill */
+      color: #ffffff;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: background 0.2s, border-color 0.2s, transform 0.1s;
+      backdrop-filter: blur(4px);     /* frosted look */
+    }
+
+    .tab:hover {
+      background: rgba(255,255,255,0.18);
+      border-color: rgba(255,255,255,0.7);
+      transform: translateY(-1px);
+    }
+
+    .tab.active {
+      background: rgba(255,255,255,0.24);
+      border-color: rgba(255,255,255,0.9);
+      color: #0b3555;
+    }
+
+    /* Content sections */
+    .tab-content {
+      display: none;
+      font-size: 1rem;
+      line-height: 1.6;
+      max-width: 650px;
+      margin: 0 auto;
+      text-align: left;
+      background: rgba(0,0,0,0.18);
+      border-radius: 18px;
+      padding: 20px 24px;
+      border: 1px solid rgba(255,255,255,0.25);
+      backdrop-filter: blur(4px);
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    a {
+      color: #e7f3ff;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Home</h1>
+    <p class="subtitle">Personal Portfolio</p>
+
+    <div class="tabs">
+      <button class="tab active" data-tab="home">Home</button>
+      <button class="tab" data-tab="projects">Projects</button>
+      <button class="tab" data-tab="skills">Skills</button>
+      <button class="tab" data-tab="contact">Contact</button>
+    </div>
+
+    <div id="home" class="tab-content active">
+      <p>Welcome to my portfolio. Use the tabs above to view my projects, skills, and how to contact me.</p>
+    </div>
+
+    <div id="projects" class="tab-content">
+      <h2>Projects</h2>
+      <p>Add short descriptions of your key projects here. You can link to GitHub repositories or live demos.</p>
+    </div>
+
+    <div id="skills" class="tab-content">
+      <h2>Skills</h2>
+      <p>List your main skills here, such as languages, frameworks, tools, and any specialties you want to highlight.</p>
+    </div>
+
+    <div id="contact" class="tab-content">
+      <h2>Contact</h2>
+      <p>You can add your email, LinkedIn, or a contact form here.</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const contents = document.querySelectorAll(".tab-content");
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        // remove active from all
+        tabs.forEach(t => t.classList.remove("active"));
+        contents.forEach(c => c.classList.remove("active"));
+
+        // add active to clicked tab and its content
+        tab.classList.add("active");
+        const target = document.getElementById(tab.dataset.tab);
+        if (target) target.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
