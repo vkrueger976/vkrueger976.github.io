@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Personal Portfolio</title>
+  <title>Violette Krueger - Personal Portfolio</title>
   <style>
     * {
       box-sizing: border-box;
@@ -38,7 +38,6 @@
       margin-bottom: 2rem;
     }
 
-    /* Tabs bar */
     .tabs {
       display: flex;
       justify-content: center;
@@ -48,14 +47,14 @@
 
     .tab {
       padding: 10px 22px;
-      border-radius: 999px;           /* pill shape */
-      border: 1px solid rgba(255,255,255,0.4); /* thin, slightly clear border */
-      background: rgba(0,0,0,0.1);    /* subtle see‑through fill */
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.4);
+      background: rgba(0,0,0,0.1);
       color: #ffffff;
       cursor: pointer;
       font-size: 0.95rem;
       transition: background 0.2s, border-color 0.2s, transform 0.1s;
-      backdrop-filter: blur(4px);     /* frosted look */
+      backdrop-filter: blur(4px);
     }
 
     .tab:hover {
@@ -70,7 +69,6 @@
       color: #0b3555;
     }
 
-    /* Content sections */
     .tab-content {
       display: none;
       font-size: 1rem;
@@ -92,6 +90,20 @@
     a {
       color: #e7f3ff;
     }
+
+    ul {
+      margin-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    h3 {
+      margin-top: 1rem;
+      margin-bottom: 0.25rem;
+    }
   </style>
 </head>
 <body>
@@ -107,54 +119,54 @@
     </div>
 
     <div id="home" class="tab-content active">
-      <p>Welcome to my portfolio. Use the tabs above to view my projects, skills, and how to contact me.</p>
+      <p>Welcome to my portfolio. Use the tabs above to view my projects, technical skills, and how to contact me.</p>
     </div>
 
     <div id="projects" class="tab-content">
-  <h2>Projects</h2>
-  <p>Here are some highlighted projects I’m working on:</p>
-  <ul>
-    <li>More details coming soon...</li>
-  </ul>
-</div>
+      <h2>Projects</h2>
+      <p>Here are some highlighted projects I’m working on:</p>
+      <ul>
+        <li>More details coming soon...</li>
+      </ul>
+    </div>
 
     <div id="skills" class="tab-content">
-  <h2>Technical Skills</h2>
+      <h2>Technical Skills</h2>
 
-  <h3>Programming Languages</h3>
-  <ul>
-    <li>Python</li>
-    <li>Java</li>
-    <li>C++</li>
-  </ul>
+      <h3>Programming Languages</h3>
+      <ul>
+        <li>Python</li>
+        <li>Java</li>
+        <li>C++</li>
+      </ul>
 
-  <h3>Tools</h3>
-  <ul>
-    <li>Git &amp; GitHub</li>
-    <li>VS Code</li>
-  </ul>
-</div>
-
+      <h3>Tools</h3>
+      <ul>
+        <li>Git &amp; GitHub</li>
+        <li>VS Code</li>
+      </ul>
+    </div>
 
     <div id="contact" class="tab-content">
-  <h2>Connect With Me</h2>
-  <p>You can reach me here:</p>
-  <ul>
-    <li>
-      GitHub:
-      <a href="https://github.com/vkrueger976" target="_blank" rel="noopener">
-        github.com/vkrueger976
-      </a>
-    </li>
-    <li>
-      LinkedIn:
-      <a href="https://www.linkedin.com/in/violette-krueger-6238343a8/"
-         target="_blank" rel="noopener">
-        Violette Krueger on LinkedIn
-      </a>
-    </li>
-  </ul>
-</div>
+      <h2>Connect With Me</h2>
+      <p>You can reach me here:</p>
+      <ul>
+        <li>
+          GitHub:
+          <a href="https://github.com/vkrueger976" target="_blank" rel="noopener">
+            github.com/vkrueger976
+          </a>
+        </li>
+        <li>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/violette-krueger-6238343a8/"
+             target="_blank" rel="noopener">
+            Violette Krueger on LinkedIn
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
   <script>
     const tabs = document.querySelectorAll(".tab");
@@ -162,11 +174,9 @@
 
     tabs.forEach(tab => {
       tab.addEventListener("click", () => {
-        // remove active from all
         tabs.forEach(t => t.classList.remove("active"));
         contents.forEach(c => c.classList.remove("active"));
 
-        // add active to clicked tab and its content
         tab.classList.add("active");
         const target = document.getElementById(tab.dataset.tab);
         if (target) target.classList.add("active");
