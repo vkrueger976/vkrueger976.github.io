@@ -3,6 +3,10 @@ layout: default
 title: Connect With Me
 ---
 
+[Home](/) | [Projects](/projects/) | [Skills](/skills/) | [Contact](/contact/)
+
+---
+
 ## 🔗 Links
 
 - GitHub: https://github.com/vkrueger976
