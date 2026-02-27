@@ -3,6 +3,10 @@ layout: default
 title: Technical Skills
 ---
 
+[Home](/) | [Projects](/projects/) | [Skills](/skills/) | [Contact](/contact/)
+
+---
+
 ## 🛠 Technical Skills
 
 ### Programming Languages
