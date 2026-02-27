@@ -3,6 +3,5 @@ layout: default
 title: Home
 ---
 
-# 👋 Violette Krueger
-
-Welcome to my personal portfolio website.
+<h2>Welcome</h2>
+<p>Welcome to my personal portfolio website.</p>
