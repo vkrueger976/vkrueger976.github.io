@@ -35,38 +35,7 @@
     p.subtitle {
       font-size: 1.2rem;
       opacity: 0.9;
-      margin-bottom: 1.5rem;
-    }
-
-    /* Social icons row */
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 18px;
       margin-bottom: 2rem;
-    }
-
-    .social-icon {
-      width: 40px;
-      height: 40px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: rgba(0,0,0,0.18);
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 1.1rem;
-      font-weight: 600;
-      backdrop-filter: blur(4px);
-      transition: background 0.2s, transform 0.1s, border-color 0.2s;
-    }
-
-    .social-icon:hover {
-      background: rgba(255,255,255,0.25);
-      border-color: rgba(255,255,255,0.9);
-      transform: translateY(-1px);
     }
 
     .tabs {
@@ -142,28 +111,6 @@
     <h1>Violette Krueger</h1>
     <p class="subtitle">Computer Science | Portfolio</p>
 
-    <!-- Social icons -->
-    <div class="social-links">
-      <a
-        class="social-icon"
-        href="https://github.com/vkrueger976"
-        target="_blank"
-        rel="noopener"
-        aria-label="GitHub"
-      >
-        G
-      </a>
-      <a
-        class="social-icon"
-        href="https://www.linkedin.com/in/violette-krueger-6238343a8/"
-        target="_blank"
-        rel="noopener"
-        aria-label="LinkedIn"
-      >
-        in
-      </a>
-    </div>
-
     <div class="tabs">
       <button class="tab active" data-tab="home">Home</button>
       <button class="tab" data-tab="projects">Projects</button>
@@ -199,13 +146,20 @@
       </ul>
     </div>
 
-    <!-- NEW: Interests section -->
     <div id="interests" class="tab-content">
       <h2>Interests</h2>
-      <p>Here's what I'm passionate about outside of coding:</p>
+      <h3>Technology</h3>
       <ul>
-        <li>Add your interests here (hobbies, causes, favorite tech topics, etc.)</li>
-        <li>For example: machine learning, open source contributions, game development</li>
+        <li>Machine Learning & AI</li>
+        <li>Web Development</li>
+        <li>Cybersecurity</li>
+      </ul>
+
+      <h3>Hobbies</h3>
+      <ul>
+        <li>Reading sci-fi novels</li>
+        <li>Hiking in the Pacific Northwest</li>
+        <li>Board games & puzzles</li>
       </ul>
     </div>
 
@@ -246,4 +200,3 @@
   </script>
 </body>
 </html>
-
